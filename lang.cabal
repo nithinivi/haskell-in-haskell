@@ -1,0 +1,30 @@
+cabal-version:       >=1.10
+
+name:                lang
+version:             1.0.0
+license-file:        LICENSE
+author:              Nithin
+maintainer:         
+build-type:          Simple
+extra-source-files:  CHANGELOG.md, README.md
+
+executable lang
+  main-is:             Main.hs
+  build-depends:       base >= 4.17 && < 4.21
+                     , lang  
+                     , pretty-simple >=4.0 && <4.1
+  default-language:    Haskell2010
+  default-extensions:  NoImplicitPrelude
+  hs-source-dirs:      app
+
+
+library
+  build-depends:       base >= 4.17 && < 4.21
+                     , containers >=0.6 && <0.7
+                     , mtl >=2.2 && <2.3
+  default-language:    Haskell2010
+  default-extensions:  NoImplicitPrelude
+  exposed-modules:     Example
+                     , Ourlude
+  ghc-options:         -Wall
+  hs-source-dirs:      src
